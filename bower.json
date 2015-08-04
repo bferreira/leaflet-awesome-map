@@ -2,10 +2,11 @@
   "name": "leaflet-awesome-map",
   "version": "0.0.0",
   "dependencies": {
-  	
   	"topojson": "~1.5.2",
-  	
-  	"jquery": "~2.1.0"	
+    "leaflet-plugins": "1.3.9",
+    "leaflet-draw": "0.2.3",
+    "jsts": "~0.14.0",
+    "jquery": "~2.1.0"
   }
 }
 

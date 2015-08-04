@@ -11,6 +11,8 @@
     
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="lib/styles/leaflet.css">
+	<link rel="stylesheet" href="lib/scripts/draw/leaflet.draw.css">
+	<link rel="stylesheet" href="lib/scripts/draw/leaflet.buffer.css">
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
@@ -34,26 +36,16 @@
 	</div>
 	<!-- build:js scripts/vendor.js -->
 	<script src="lib/scripts/leaflet.js"></script>
-  <!-- bower:js -->
+	<script src="lib/scripts/Bing.js"></script>
+	<script src="lib/scripts/KML.js"></script>
+	<script src="lib/scripts/draw/leaflet.draw.js"></script>
+
+	<script src="lib/scripts/jsts/javascript.util.js"></script>
+	<script src="lib/scripts/jsts/jsts.js"></script>
+	<script src="lib/scripts/draw/leaflet.buffer-src.js"></script>
+		<!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
-	
-	<script src="bower_components/topojson/topojson.js"></script>
-	<script>
-		// Copyright (c) 2013 Ryan Clark, https://gist.github.com/rclark/5779673 
-		L.TopoJSON = L.GeoJSON.extend({
-			addData: function(jsonData){
-				if(jsonData.type === "Topology") {
-					for (key in jsonData.objects){
-						geojson=topojson.feature(jsonData,jsonData.objects[key]);
-						L.GeoJSON.prototype.addData.call(this, geojson);
-					}
-				}else{
-					L.GeoJSON.prototype.addData.call(this, jsonData);
-				}
-			}
-		});
-	</script>
-	<!-- endbower -->
+  <!-- endbower -->
   <!-- endbuild -->
 	
 	<!-- build:js scripts/main.js -->
